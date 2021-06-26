@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("\assets\images\hero-bg.jpg") top right;
+  background: url("https://github.com/anandpm13/datavoyager/blob/main/assets/images/hero-bg.jpg?raw=true") top right;
   background-size: cover;
 }
 
