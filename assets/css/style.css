@@ -791,6 +791,31 @@ section {
   background: #fff;
   border: 2px solid #34b7a7;
 }
+#resume .btn-about {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #34b7a7;
+}
+
+#resume .btn-about:hover {
+  background: #3dc8b7;
+}
+
+@media (min-width: 1024px) {
+  #resume {
+    background-attachment: fixed;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Services
