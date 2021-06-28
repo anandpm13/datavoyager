@@ -1,41 +1,28 @@
-<?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+<?php 
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'pmanand13@gmail.com';
+    if(isset($_POST['btn-send']))
+    {
+       $UserName = $_POST['UName'];
+       $email = $_POST['Email'];
+       $subject = $_POST['Subject'];
+       $Message = $_POST['msg'];
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+       if(empty($UserName) || empty($Email) || empty($Subject) || empty($Msg))
+       {
+           header('location:contact.php?error');
+       }
+       else
+       {
+           $to = "pmanand13@gmail.com";
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+           if(mail($to,$Subject,$Msg,$Email))
+           {
+               header("location:index.php?success");
+           }
+       }
+    }
+    else
+    {
+        header("location:index.php");
+    }
 ?>

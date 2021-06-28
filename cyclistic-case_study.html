@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio - Kelly Bootstrap Template</title>
+  <title>Cyclistic-Anand PM</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -65,10 +65,10 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://twitter.com/anandpm13" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/pmanand16" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/data.voyager/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/anand-pm/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
 
     </div>
@@ -81,7 +81,7 @@
 		    <div class="container">
 			    <header class="blog-post-header">
 				    <h2 class="title mb-2">Cyclistic Case Study</h2>
-				    <div class="meta mb-3"><span class="date">Published 3 months ago</span><span class="time">5 min read</span><span class="comment"><a href="#">4 comments</a></span></div>
+				    <div class="meta mb-3"><span class="date">Published on 14th june, 2021</span><span class="time">15 min read</span></div>
 			    </header>
 			    
 			    <div class="blog-post-body">
@@ -91,41 +91,49 @@
 				    </figure>
 				    <p>As the part of Capstone project in Google Data Analytics program, a case study was done on a bike-share company, to analyse their data and to derive meaningful conclusions</p>
 				    
-				    <h3 class="mt-5 mb-3">SCENARIO</h3>
+				    <h3 class="mt-5 mb-3">OVERVIEW</h3>
 				    <p>Cyclistic is a bike-share company that have 5,800+ bicycles and 600+ docking stations. There are two type of riders, Annual members who take a year long membership , Casual riders who either choose for 1 ride or for the entire day. The director of the company believes comapny's futire success depends on maximizing the number of annual membership. Lily Moreno who is the director of marketing and my manager assigned me the following business task.  </P>
 				 
-				    <h3 class="mt-5 mb-3">BUSINESS TASK</h3>
-				    <p>To determine how the Casual riders and Annual members use Cyclisitc bikes differently</p>
-				<pre></pre>
-					<h3 class="mt -5 mb-3">SOLUTION</h3>
-					<p>The detailed structured path of analysis is attached here</p>
-					<a href="datavoyager\assets\docs\Cyclistic_DA_plan.pdf">view plan</a>
-					
+				    <h3 class="mt-5 mb-3">APPROACH</h3>
+				    <p>In this Case-Study we follow a structured 6 steps of Data Analysis as follows :</p>
+            <pre></pre>
+           
+            <h5 class="mt-5 mb-3">ASK</h5>
+            <li>From 12 months of bike-sharing data, find out How do annual members and
+              casual riders use cyclistic bikes differently; To Cyclistic executive team and Lily
+              Moreno who are my primary and secondary stakeholders respectively</li>
+			
+              <pre></pre>
+					<h5 class="mt-5 mb-3">PREPARE</h5>
+          <li>12 months Cyclistic's historical trip data - 1st party data.</li>
+          <li> The data has been made available by Motivate International Inc.
+            <a href="https://www.divvybikes.com/data-license-agreement" target="_blank">License is available here</a></li>
+          <li>It is structured data which is organized into rows and columns</li>  
+				
+          <h5 class="mt-5 mb-3">PROCESS</h5>
+					<li> Tools I used for this case study is Rstudio</li>
+          <li>Data integrity is ensured by going through any possible error, accuracy and consistency of data</li>
+          <li>Whole Data cleaning and analysing was documentedby a RMD file. <a href="\assets\docs\Cyclisitc_DA_Documentation_R_Programing.pdf" target="_blank">Explore RMD file!</a></li>
+         
+         
+          <h5 class="mt-5 mb-3">ANALYZE</h5>
+          <li>The data was organized by week day</li>
+          <li>By the chart given below, A trend was found that during weekend there is more number of casual riders. We can call it Weekend effect. </li>
 					<iframe width="616" height="382" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTErp6buSjx2Hh9LAOCniVB7aw4weEMYJDcqe9Jlzn9bI4NyYOhEwFZ_CERu2oBCCabEyTHhQXuODNY/pubchart?oid=547426224&amp;format=interactive"></iframe>
-					
-					<iframe width="684" height="423" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTErp6buSjx2Hh9LAOCniVB7aw4weEMYJDcqe9Jlzn9bI4NyYOhEwFZ_CERu2oBCCabEyTHhQXuODNY/pubchart?oid=615730130&amp;format=interactive"></iframe>
+					<li>whereas we can see constant number of annual riders during weekdays, so it may be working class who are maximum utilizing Annual membership</li>
+					<pre></pre><li>By the column chart given below, We can see that casual riders spend more time on ride, which gives a confirm that either they use for long distance commutation or for tourim activities such as sightseeing. 
+         <pre></pre> <iframe width="684" height="423" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTErp6buSjx2Hh9LAOCniVB7aw4weEMYJDcqe9Jlzn9bI4NyYOhEwFZ_CERu2oBCCabEyTHhQXuODNY/pubchart?oid=615730130&amp;format=interactive"></iframe>
 
-					<iframe width="630" height="388" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTErp6buSjx2Hh9LAOCniVB7aw4weEMYJDcqe9Jlzn9bI4NyYOhEwFZ_CERu2oBCCabEyTHhQXuODNY/pubchart?oid=1288808576&amp;format=interactive"></iframe>
+				<h5 class="mt-5 mb-3">SHARE</h5>
+        <li> Finally, A presentation was made inorder to communicate our findings with stakeholders. It is presented below.</li>	
+        <pre></pre><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQitPp9BpguOv0sOWbQHOAezfew17SgMIYrQw9Wm-vVBc4qTIWbhxQSs_MY_T174z4biFzwHs5q1RZ-/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
+				<h5 class="mt-5 mb-3">ACT</h5>
+        <li>So our recommendation to the stakeholders is that including a weekend plan in annual membership and also discounted rates after few distance or time will attract more casual riders to choose annual membership</li>
 
-					
-					<h5 class="my-3">Bullet Points:</h5>
-				    <ul class="mb-5">
-					  <li class="mb-2">Lorem ipsum dolor sit amet consectetuer.</li>
-					  <li class="mb-2">Aenean commodo ligula eget dolor.</li>
-					  <li class="mb-2">Aenean massa cum sociis natoque penatibus.</li>
-					</ul>
-					<ol class="mb-5">
-					  <li class="mb-2">Lorem ipsum dolor sit amet consectetuer.</li>
-					  <li class="mb-2">Aenean commodo ligula eget dolor.</li>
-					  <li class="mb-2">Aenean massa cum sociis natoque penatibus.</li>
-				   
 			    
 				    
-			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-				</nav>
+			  
 				
 				<div class="blog-comments-section">
 					<div id="disqus_thread"></div>
@@ -180,25 +188,6 @@
     
     </div><!--//main-wrapper-->
     
-
-    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
-    <div id="config-panel" class="config-panel d-none d-lg-block">
-        <div class="panel-inner">
-            <a id="config-trigger" class="config-trigger config-panel-hide text-center" href="#"><i class="fas fa-cog fa-spin mx-auto" data-fa-transform="down-6" ></i></a>
-            <h5 class="panel-title">Choose Colour</h5>
-            <ul id="color-options" class="list-inline mb-0">
-                <li class="theme-1 active list-inline-item"><a data-style="assets/css/theme-1.css" href="#"></a></li>
-                <li class="theme-2  list-inline-item"><a data-style="assets/css/theme-2.css" href="#"></a></li>
-                <li class="theme-3  list-inline-item"><a data-style="assets/css/theme-3.css" href="#"></a></li>
-                <li class="theme-4  list-inline-item"><a data-style="assets/css/theme-4.css" href="#"></a></li>
-                <li class="theme-5  list-inline-item"><a data-style="assets/css/theme-5.css" href="#"></a></li>
-                <li class="theme-6  list-inline-item"><a data-style="assets/css/theme-6.css" href="#"></a></li>
-                <li class="theme-7  list-inline-item"><a data-style="assets/css/theme-7.css" href="#"></a></li>
-                <li class="theme-8  list-inline-item"><a data-style="assets/css/theme-8.css" href="#"></a></li>
-            </ul>
-            <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
-        </div><!--//panel-inner-->
-    </div><!--//configure-panel-->
 
     
        

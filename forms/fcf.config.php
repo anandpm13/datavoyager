@@ -74,7 +74,7 @@ define('EMAIL_OUT_FROM_NAME', '');
 // *************
 // EMAIL MESSAGE
 // *************
-define('EMAIL_TO', 'pmanand13@gmail.com');
+define('EMAIL_TO', '');
 define('EMAIL_TO_NAME', '');
 
 define('EMAIL_TO_CC', '');
