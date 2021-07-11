@@ -42,9 +42,7 @@
 *::after {
   box-sizing: border-box;
 }
-@-ms-viewport{
-  width: device-width;
-}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
