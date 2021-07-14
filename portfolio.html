@@ -37,6 +37,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/cards.css" rel="stylesheet">
+
 
   <!-- =======================================================
   * Template Name: Kelly - v4.3.0
@@ -88,32 +90,40 @@
           <h2>Portfolio</h2>
           <p></p>
         </div>
-        <div class="main-wrapper">
-	    
-          <section class="blog-list px-3 py-5 p-md-5">
-            <div class="container">
-              <div class="item mb-5">
-                <div class="media">
-                  <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/itc-thumbnail.jpg" alt="image">
-                  <div class="media-body">
-                    <h3 class="title mb-1"><a href="ITC-Analysis.html">Is ITC a fundamentaly strong company for Investors?</a></h3>
-                    <div class="meta mb-1"><span class="date">Published on july 11, 2021</span><span class="time">5 min read</span></div>
-                    <div class="intro">ITC have been a great discussion topic for Dalal Street. We will analyse the company quantitatively and qualitatively</div>
-                    <a class="more-link" href="ITC-Analysis.html">Read more &rarr;</a>
-                  </div><!--//media-body-->
-                </div><!--//media-->
-              </div><!--//item-->
-              <div class="item mb-5">
-                <div class="media">
-                  <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/cyclistic-thumbnail.jpg" alt="image">
-                  <div class="media-body">
-                    <h3 class="title mb-1"><a href="cyclistic-case_study.html">Cyclistic Case-Study</a></h3>
-                    <div class="meta mb-1"><span class="date">Published on june 14, 2021</span><span class="time">3 min read</span></div>
-                    <div class="intro">With 1 year of riders dataset, Cyclistic bike share company wants to know how their two type of riders use their service.</div>
-                    <a class="more-link" href="cyclistic-case_study.html">Read more &rarr;</a>
-                  </div><!--//media-body-->
-                </div><!--//media-->
-              </div><!--//item-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+        <section class="hero-section">
+          <div class="card-grid">
+           <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)"></div>
+              <div class="card__content">
+                <p class="card__category">Comming soon</p>
+                <h3 class="card__heading">Covid Dashboard</h3>
+              </div>
+            </a>  
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1601011850287-43e30b7db748?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&q=80)"></div>
+              <div class="card__content">
+                <p class="card__category">Comming soon</p>
+                <h3 class="card__heading">World Happiness-Report</h3>
+              </div>
+            </a>
+            <a class="card" href="ITC-Analysis.html">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1579689252125-767b773f3f69?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)"></div>
+              <div class="card__content">
+                <p class="card__category">Spreadsheet</p>
+                <h3 class="card__heading">ITC Quantitative Analysis</h3>
+              </div>
+            </li>
+            <a class="card" href="cyclistic-case_study.html">
+              <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1554731314-a9ecad1a844e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)"></div>
+              <div class="card__content">
+                <p class="card__category">R programing | Spreadsheet</p>
+                <h3 class="card__heading">Cyclistic Case-Study</h3>
+              </div>
+            </a>
+          <div>
+        </section>
               
              
         
@@ -136,8 +146,8 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
     <div class="container">
       <div class="copyright">
         &copy; Copyright <strong><span>Anand PM</span></strong>. All Rights Reserved
@@ -167,13 +177,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
- <!-- Javascript -->          
- <script src="assets/plugins/jquery-3.4.1.min.js"></script>
- <script src="assets/plugins/popper.min.js"></script> 
- <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
- 
- <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
- <script src="assets/js/demo/style-switcher.js"></script>  
+
 </body>
 
 </html>

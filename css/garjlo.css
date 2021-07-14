@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500|Fira+Sans:300,400,500,600,700');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+
+// Footer
+#footer {
+	background-color: #364459;
+	border-top: 1px solid #fff3;
+	box-shadow: 0 -1px #0009;
+	color: #fff;
+	font-family: "Fira Sans";
+	font-size: 10px;
+	font-weight: 300;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999999999999999999999;
+	
+	// Mixins
+	@mixin author_box {
+		display: inline-block;
+		padding: 1em;
+		vertical-align: middle;
+	}
+	@mixin icon {
+		font-family: FontAwesome;
+		margin-right: .5em;
+	}
+	@mixin author_link {
+		border-bottom: 1px solid hsl(200, 100, 50);
+		color: #fff;
+		display: inline-block;
+		font-weight: 600;
+		position: relative;
+		text-decoration: none;
+		transition: border-color .5s;
+
+		&:hover {
+			border-color: hsl(300, 100, 50);
+		}
+	}
+	
+	// Footer: Author Box
+	&__author {
+		display: flex;
+		flex-flow: row wrap;
+		font-size: 1.4em;
+		justify-content: space-evenly;
+		
+		// "Pen by <name>"
+		&__who {
+			@include author_box;
+			flex: 1;
+			
+			// The "by" span. The span itself is deliberately empty so it can be freely modified within the CSS without any hardcoding in the HTML
+			&--by {
+				color: #ddd;
+
+				&:before {
+					@include icon;
+					content: "\f1cb";
+				}
+				&:after {
+					content: "Pen by";
+					margin-right: .5em;
+				}
+			}
+			
+			// Name link
+			&--link {
+				@include author_link;
+				
+				&:before {
+					content: "";
+					background-image: var(--avatar);
+					background-size: contain;
+					border: 1px solid #fff;
+					border-radius: 100%;
+					display: inline-block;
+					margin-right: .25em;
+					margin-top: -.25em;
+					width: .75em;
+					height: .75em;
+					vertical-align: middle;
+				}
+			}
+		}
+		
+		// "Keep Following"
+		&__follow {
+			@include author_box;
+			flex: 1;
+			text-align: right;
+			
+			&--link {
+				@include author_link;
+				border-width: 0;
+				
+				&:before {
+					@include icon;
+					content: "\f14d";
+				}
+				&:after {
+					content: "Places to Keep Following";
+					border-bottom: 1px solid hsl(200, 100, 50);
+					transition: border-color .5s;
+				}
+				&:hover:after { border-color: hsl(300, 100, 50); }
+			}
+		}
+		
+		&:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+	}
+	
+	// Footer: Related Text, Box, and Links
+	&__related {
+		background-image:
+			linear-gradient(to bottom, change-color(#000000, $alpha: .25), change-color(#000000, $alpha: .1));
+		box-shadow: 0 -1px #fff2, inset 0 1px #0002;
+		display: flex;
+		font-size: 1.4em;
+		overflow: hidden;
+		transition: max-height 1s;
+		align-items: center;
+		
+		&--text {
+			@include author_box;
+			color: #ddd;
+			flex: 0;
+			&:before {
+				@include icon;
+				content: "\f0ec";
+			}
+			&:after {
+				content: "Related:";
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		&--box {
+			background: #0002;
+			border-left: 1px solid #0002;
+			box-shadow: -1px 0 #fff1;
+			box-sizing: border-box;
+			flex: 1;
+			overflow: auto;
+			padding: .5em;
+			white-space: nowrap;
+			
+			& a {
+				border: 1px solid #fff3;
+				border-radius: 4px;
+				display: inline-block;
+				margin: .25em;
+				opacity: .75;
+				overflow: hidden;
+				position: relative;
+				transition: all .25s;
+				vertical-align: top;
+				&:first-of-type { margin-left: 0; }
+				&:last-of-type { margin-right: 0; }
+				
+				&:hover {
+					border-color: #fff6;
+					opacity: 1;
+					&:after {
+						opacity: 1;
+					}
+				}
+				&:after {
+					content: attr(title);
+					position: absolute;
+					top: 0;
+					left: 0;
+					
+					background: #0009;
+					box-sizing: border-box;
+					color: #fff;
+					opacity: 0;
+					overflow: hidden;
+					padding: .5em;
+					pointer-events: none;
+					text-overflow: ellipsis;
+					width: 100%;
+					height: 100%;
+					white-space: pre-wrap;
+					transition: all .25s;
+				}
+			}
+			& img {
+				width: 128px;
+				vertical-align: top;
+			}
+		}
+	}
+	
+	// Footer v1.2: Link Bar
+	&__links {
+		background-image:
+			linear-gradient(to bottom, #fff1 0%, #fff1 50%, transparent 50%, transparent),
+			linear-gradient(to bottom, rgba(#000, .25), #fff1)
+		;
+		box-shadow: 0 -1px #fff2, inset 0 1px #0002, 0 1px #fff8, inset 0 -1px #0009;
+		font-size: 1.4em;
+		padding: 8px;
+		text-align: center;
+		
+		a {
+			@include author_link;
+			margin: 0 .5em;
+			padding: 0 .5em;
+			
+			&:not(:last-of-type):after {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: -.5em;
+				width: 1px;
+				background: #fff2;
+			}
+		}
+	}
+}
+
+// Responsiveness
+@media screen and (max-height: 640px) {
+	#footer__related { max-height: 1.5em; }
+	#footer:hover #footer__related,
+	#footer__related:focus-within {
+		max-height: 600px;
+	}
+}
+@media screen and (max-width: 960px) {
+	#footer__related--text { display: none; }
+}
+@media screen and (max-width: 480px) {
+	#footer__author__who--by:after { display: none; }
+	#footer__author__follow--link:after { content: "Follow Me"; }
+	#footer__author__who, #footer__author__follow { white-space: no-wrap; }
+}
