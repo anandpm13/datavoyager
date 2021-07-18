@@ -73,7 +73,7 @@
   </header><!-- End Header -->
 
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/ITC-Cover.jpg')">
+        <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -95,27 +95,126 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Being Data Analyst, We can be very versatile in our field, so I have chosen to Analyse one of my favourite modes of analysis: the Fundamental Analysis of a company.</p>
+                        <p>World happiness report’s dataset is a great dataset to make your hand dirty as a Data analyst. 
+                          Today we can know, what is the world happiness report? What are the attributes used to measure happiness? which all attributes have a higher correlation with happiness?
+                          </p>
 
-                        <h2 class="section-heading">OVERVIEW</h2>
-                        <p>ITC is India's one of the largest conglomerates which have a well-diversified business model. Also, It has been one of the hottest topics for discussion among Investors in Dalal Street.
-                          So today we are going to Analyse the company especially to read into the financial numbers and conclude how each business vertical of the company are performing</p>
+                        <h2 class="section-heading" style="color: darkslateblue">World Happiness Report</h2>
+                        <p>World happiness report is published by <a href="https://www.unsdsn.org/world-happiness-report-2021-media-round-up">Sustainable Development Solutions Network</a> and they use 8 predictors to rank each country. This year theme focused on the effect of COVID-19 on happiness and how each country managed it.</p>
+                          <h5 style="color: black;">Data Source</h5>
+                            <p>They collect data from international organisations like World Health Organisation(WHO), the world bank etc. Gallup is a Public opinion poll where people have to rate (1-10) to the questions asked</p>
                         
-                          <h3 class="section-heading">APPROACH</h3>
+                            <h3 class="section-heading">APPROACH</h3>
                         <p>For the fundamental analysis, 10-year Segment wise data was collected from the corresponding annual reports of ITC as well as from other peer companies. This data was then processed in spreadsheets and data visualisation objects for the analysis was drawn from it. The link to the workbook is given here</p>  
+                          <p>So today we are going to look mainly on the 6 predictors of this report</p>
+                        
+                          <h3 class="section-heading" style="color: goldenrod;">GDP Per Capita</h3>
+                          <p>Gross Domestic Product (GDP) is the total market value of all the goods and services produced by the country during a specific time.
+                            So, here GDP of all countries are calculated and converted to international dollars to avoid currency exchange rate errors,
+                            </p>
+                              <p>Next GDP per capita is calculated by dividing the entire value by the total population of the country. Hence, we get how much each individual contributed to the GDP. Finally, natural logarithm of each value is found for easy analysis</p>
+                        
+                              <h3 class="section-heading" style="color: darkgreen;">Life Expectancy</h3>
+                        <p>Life expectancy at birth is defined as the average age a newborn could expect to live if he or she were to pass through life subject to the age-specific mortality rates of a given period.
+                          Here, they are constructed based on data from the World Health Organization (WHO) Global Health Observatory data repository
+                          </p>
+                        <h3 class="section-heading" style="color: darkslateblue;">Freedom To Choice</h3>
+                        <p>Freedom to Make Life Choices, It is the national average of binary(yes/no) responses to the Gallup World Poll question</p>
+                          <p>"Are you satisfied or dissatisfied with your freedom to choose what you do with your life?"</p>
+                        
+                        <h3 class="section-heading" style="color: darkred;">Corruption</h3>
+                          <P>It is also the average of two Gallup question </P>
+                          <p>"Is Corruption widespread throughout the government or not" & " Is corruption widespread within businesses or not</p>
+                        <h3 class="section-heading" style="color: purple;">Generosity</h3>
+                          <p>"Have you Donated money to a charity in the past month" Average of responses to this Gallup question is took for Generosity</p>
+                        <h3 class="section-heading" style="color: seagreen;">Social Support</h3>
+                          <p>Here also a Gallup survery question is asked "If you were in trouble, do you have relatives or friends you can count on to help you whenever you need them, or not?</p>
 
-                        <h3 class="section-heading">ANALYSIS</h3>
-               
-                        <p>Thank you all for analysing ITC along with me, Do post your feedbacks and reviews as comments , I am happy to hear from you</p>  
-                        <pre></pre> 
-                                                
-                       <div class="fb-comments" data-href="https://anandpm13.github.io/datavoyager/ITC-Analysis.html" data-width="500" data-numposts="5"></div>
+                        <h3 class="section-heading">Analysis</h3>
+                        <p>Our first job is to find the correlation of these 6 predictors with the happiness score, Correlation measures the degree to which two variables move in relation to each other, and the value falls between -1.0 & +1.0, +1.0 means if one variable goes up, other one will also go up in similar manner and vice versa for negative one </p>
+                          <p>Let's plot a bar graph and see the result!</p>
+                          <img class="img-fluid" src="assets/images/blog/corr-whr.png" alt="correlation of 6 variables" />
+                          <head>
+                            <style>
+                            #customers {
+                              font-family: Arial, Helvetica, sans-serif;
+                              border-collapse: collapse;
+                              width: 70%;
+                            }
+                            
+                            #customers td, #customers th {
+                              border: 1px solid #ddd;
+                              padding: 8px;
+                            }
+                            
+                            #customers tr:nth-child(even){background-color: #f2f2f2;}
+                            
+                            #customers tr:hover {background-color: #ddd;}
+                            
+                            #customers th {
+                              padding-top: 12px;
+                              padding-bottom: 12px;
+                              text-align: left;
+                              background-color: #04AA6D;
+                              color: white;
+                            }
+                            </style>
+                            </head>
+                            <body>
+                            
+                            <table id="customers">
+                              <tr>
+                                <th>Predictor</th>
+                                <th>Correlation</th>
+                               
+                              </tr>
+                             
+                              <tr>
+                                 <td>GDP per capita</td>
+                                <td>0.7898</td>
+                               
+                              </tr>
+                              <tr>
+                                <td>Healthy life expectancy</td>
+                                <td>0.7681</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Social support</td>
+                                <td>0.7569</td>
+                          
+                              </tr>
+                              <tr>
+                                <td>Freedom to make life choices</td>
+                                <td>0.6078</td>
+                             
+                              </tr>
+                              <tr>
+                                <td>Generosity</td>
+                                <td>-0.0178</td>
+                             
+                              </tr>  <tr>
+                                <td>Perceptions of corruption</td>
+                                <td>-0.4211</td>
+                             
+                              </tr>
+                            </table>
+                            <pre></pre>
+
+                       
                         
                       </div>
                     </div>
                   </div>
                   <div class='tableauPlaceholder' id='viz1626618031691' style='position: relative'><noscript><a href='#'><img alt='&lt;World Happiness Analysis 2021&gt; ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldHappiness2021_16266177930630&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WorldHappiness2021_16266177930630&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wo&#47;WorldHappiness2021_16266177930630&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1626618031691');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-              
+                  <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p>Thank you all for analysing World Happiness Report along with me, Do post your feedbacks and reviews as comments , I am happy to hear from you</p>  
+                    <pre></pre> 
+                     <li>GDP per capita, Helathy life expectancy and social support heavily correlate with happiness that is  if a country's GDP, health and social support is increased their happiness also increase</li>
+                     <li>Corruption negatively correlate with happiness which is also good, as when a country is able to control its corruption, people become much happier</li>
+                     <li> Generosity, which we relate as a good humaitarian feature suprisingly have no correlation with happiness, </li>                       
+                   <div class="fb-comments" data-href="https://anandpm13.github.io/datavoyager/ITC-Analysis.html" data-width="500" data-numposts="5"></div>
                 
              
 
